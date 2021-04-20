@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import java.util.Set;
 
 @Entity
@@ -18,8 +19,9 @@ import java.util.Set;
 @AllArgsConstructor
 public class Book {
     @Id
-    @GeneratedValue
     @Column(nullable = false)
+    @GeneratedValue(generator = "bookId")
+    @SequenceGenerator(name = "bookId")
     private Long id;
     @Column(nullable = false)
     private String name;

@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 @Data
@@ -15,8 +16,9 @@ import javax.persistence.Id;
 @AllArgsConstructor
 public class Author {
     @Id
-    @GeneratedValue
     @Column(nullable = false)
+    @GeneratedValue(generator = "authorId")
+    @SequenceGenerator(name = "authorId")
     private Long id;
     @Column(nullable = false)
     private String name;
