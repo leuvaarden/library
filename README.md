@@ -1,3 +1,5 @@
+[![Website mephilibrary.herokuapp.com](https://img.shields.io/website-up-down-green-red/http/mephilibrary.herokuapp.com.svg)](https://mephilibrary.herokuapp.com/)
+
 Практическая задача на профессиональной оценке квалификации выпускников. 20.04.2021.
 
 # Содержание
