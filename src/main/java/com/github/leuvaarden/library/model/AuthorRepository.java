@@ -4,8 +4,6 @@ import com.github.leuvaarden.library.dao.Author;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.UUID;
-
 @Repository
-public interface Authors extends CrudRepository<Author, UUID> {
+public interface AuthorRepository extends CrudRepository<Author, Long> {
 }

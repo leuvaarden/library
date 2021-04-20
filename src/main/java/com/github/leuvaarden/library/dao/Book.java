@@ -11,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import java.util.Set;
-import java.util.UUID;
 
 @Entity
 @Data
@@ -21,7 +20,7 @@ public class Book {
     @Id
     @GeneratedValue
     @Column(nullable = false)
-    private UUID id;
+    private Long id;
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)

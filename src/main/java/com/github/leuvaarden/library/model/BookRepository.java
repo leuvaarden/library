@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.UUID;
 
 @Repository
-public interface Books extends CrudRepository<Book, UUID> {
+public interface BookRepository extends CrudRepository<Book, Long> {
 
     @RestResource(rel = "findAllByAuthorsId")
-    List<Book> findAllByAuthorsId(UUID id);
+    List<Book> findAllByAuthorsId(Long id);
 
     @RestResource(rel = "findAllByCategoriesId")
-    List<Book> findAllByCategoriesId(UUID id);
+    List<Book> findAllByCategoriesId(Long id);
 }

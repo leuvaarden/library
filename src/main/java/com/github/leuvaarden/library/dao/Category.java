@@ -8,7 +8,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.UUID;
 
 @Entity
 @Data
@@ -18,7 +17,7 @@ public class Category {
     @Id
     @GeneratedValue
     @Column(nullable = false)
-    private UUID id;
+    private Long id;
     @Column(nullable = false)
     private String name;
 }
