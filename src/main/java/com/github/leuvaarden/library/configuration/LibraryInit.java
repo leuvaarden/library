@@ -1,4 +1,4 @@
-package com.github.leuvaarden.library;
+package com.github.leuvaarden.library.configuration;
 
 import com.github.leuvaarden.library.dao.Author;
 import com.github.leuvaarden.library.dao.Book;
@@ -25,7 +25,6 @@ public class LibraryInit {
     private Categories categories;
     @Resource
     private Reviews reviews;
-
 
     @PostConstruct
     public void init() {
