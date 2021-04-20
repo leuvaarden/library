@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import java.util.HashSet;
 import java.util.Set;
 
 @Configuration
@@ -57,24 +58,32 @@ public class LibraryInit {
 
         Book book1 = new Book();
         book1.setName("Interesting story");
-        book1.setAuthors(Set.of(author1, author2));
-        book1.setCategories(Set.of(category1));
-        book1.setReviews(Set.of(review1));
+        book1.setAuthors(setOf(author1, author2));
+        book1.setCategories(setOf(category1));
+        book1.setReviews(setOf(review1));
         book1.setCount(3L);
         books.save(book1);
         Book book2 = new Book();
         book2.setName("Long novel");
-        book2.setAuthors(Set.of(author1));
-        book2.setCategories(Set.of(category1, category2));
-        book2.setReviews(Set.of(review2));
+        book2.setAuthors(setOf(author1));
+        book2.setCategories(setOf(category1, category2));
+        book2.setReviews(setOf(review2));
         book2.setCount(100L);
         books.save(book2);
         Book book3 = new Book();
         book3.setName("Love poetry");
-        book3.setAuthors(Set.of(author2));
-        book3.setCategories(Set.of(category2));
-        book3.setReviews(Set.of(review3, review4));
+        book3.setAuthors(setOf(author2));
+        book3.setCategories(setOf(category2));
+        book3.setReviews(setOf(review3, review4));
         book3.setCount(0L);
         books.save(book3);
+    }
+
+    private Set setOf(Object... elements) {
+        Set set = new HashSet();
+        for (Object element : elements) {
+            set.add(element);
+        }
+        return set;
     }
 }
